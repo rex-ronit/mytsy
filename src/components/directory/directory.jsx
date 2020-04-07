@@ -12,9 +12,9 @@ class Directory extends React.Component {
                   title: 'denims',
                   imageUrl: 'https://images.pexels.com/photos/1598507/pexels-photo-1598507.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
                   id: 1,
-                  linkUrl: 'shop/denims',
-                  size: 'small',
                   linkUrl: 'denims',
+                  size: 'small',
+      
                 },
                 {
                   title: 'jackets',
@@ -22,7 +22,7 @@ class Directory extends React.Component {
                   id: 2,
                   linkUrl: 'shop/jackets',
                   size: 'small',
-                  linkUrl: '',
+            
                 },
                 {
                   title: 'sneakers',
@@ -30,7 +30,7 @@ class Directory extends React.Component {
                   id: 3,
                   linkUrl: 'shop/sneakers',
                   size: 'small',
-                  linkUrl: '',
+                  
                 },
                 {
                   title: 'women\'s',
@@ -38,8 +38,8 @@ class Directory extends React.Component {
                   size: 'large',
                   id: 4,
                   linkUrl: 'shop/womens',
-                  size: 'large',
-                  linkUrl: '',
+          
+                  
                 },
                 {
                   title: 'men\'s',
@@ -47,8 +47,6 @@ class Directory extends React.Component {
                   size: 'large',
                   id: 5,
                   linkUrl: 'shop/mens',
-                  size: 'large',
-                  linkUrl: '',
                 }
             ]
         }
