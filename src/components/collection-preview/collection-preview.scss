@@ -1,0 +1,19 @@
+.collection-preview {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 40px 80px;
+  
+    .preview-title {
+      font-size: 40px;
+      margin: auto;
+      margin-bottom: 25px ;
+      padding: 30px;
+    }
+  
+    .preview {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
