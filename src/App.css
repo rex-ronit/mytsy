@@ -1,3 +1,8 @@
 body {
     font-family: 'spartan';
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
