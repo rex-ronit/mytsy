@@ -1,20 +1,36 @@
-import React from 'react';
-import './header.scss';
-import { Link } from 'react-router-dom';
-import logo from './mytsy-logo-1.png';
+import React from "react";
+import "./header.scss";
+import { Link } from "react-router-dom";
+import { auth } from "../../firebase/firebase.utils";
+import logo from "./mytsy-logo-1.png";
 
-const url = './mytsy-logo-1.png';
+const url = "./mytsy-logo-1.png";
 
-const Header = () => (
-    <div className="header">
-        <Link className='logo-container' to='/'>
-            <img src={logo} className="logo-container" alt="logo" />
+const Header = (props) => (
+  <div className="header">
+    <Link className="logo-container" to="/">
+      <img src={logo} className="logo-container" alt="logo" />
+    </Link>
+    <div className="options">
+      <Link className="option" to="/shop">
+        SHOP
+      </Link>
+
+      <Link className="option" to="/contact">
+        CONTACT
+      </Link>
+
+      {props.currentUser ? (
+        <Link className="option" onClick={() => auth.signOut()}>
+          SIGN OUT
         </Link>
-        <div className="options">
-            <Link className="option" to='/shop'>SHOP</Link>
-            <Link className="option" to='/contact'>CONTACT</Link>
-        </div>
+      ) : (
+        <Link className="option" to="/signin">
+          SIGN IN
+        </Link>
+      )}
     </div>
-)
+  </div>
+);
 
 export default Header;
