@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
 import logo from "./mytsy-logo-1.png";
 
-const url = "./mytsy-logo-1.png";
-
 const Header = (props) => (
   <div className="header">
     <Link className="logo-container" to="/">
@@ -21,7 +19,7 @@ const Header = (props) => (
       </Link>
 
       {props.currentUser ? (
-        <Link className="option" onClick={() => auth.signOut()}>
+        <Link className="option" to="/signin" onClick={() => auth.signOut()}>
           SIGN OUT
         </Link>
       ) : (
