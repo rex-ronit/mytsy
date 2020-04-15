@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
 import logo from "./mytsy-logo-1.png";
 import { connect } from "react-redux";
+import CartIcon from "../cart-icon/cart-icon";
+import CartDropdown from "../cart-dropdown/cart-dropdown";
 
 const Header = (props) => (
   <div className="header">
@@ -28,12 +30,15 @@ const Header = (props) => (
           SIGN IN
         </Link>
       )}
+      <CartIcon />
     </div>
+    {props.hidden ? null : <CartDropdown />}
   </div>
 );
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden,
 });
 
 export default connect(mapStateToProps)(Header);

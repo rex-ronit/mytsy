@@ -22,14 +22,13 @@
     align-items: center;
     justify-content: flex-end;
 
-    &:last-child {
-      padding-right: 40px;
-    }
-
     .option {
       padding: 10px 15px;
+      margin: 0 3px;
       border-radius: 3px;
       transition: all 0.3s;
+      margin-bottom: -3px;
+      padding-bottom: 7px;
 
       &:hover {
         background-color: rgba($color-black, 0.2);
