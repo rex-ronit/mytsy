@@ -13,13 +13,14 @@
   z-index: 5;
 
   .cart-items {
-    height: 240px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    border-radius: 3px;
   }
 
   button {
-    margin-top: auto;
+    margin-top: 20px;
   }
 }
