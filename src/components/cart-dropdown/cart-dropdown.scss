@@ -12,15 +12,23 @@
   right: 45px;
   z-index: 5;
 
+  .empty {
+    font-size:  18px;
+    margin: 50px auto;
+  }
+
   .cart-items {
     height: 400px;
     display: flex;
     flex-direction: column;
+    white-space:nowrap;
     overflow: scroll;
-    border-radius: 3px;
+    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: scroll;
+    border-radius: 4px;
   }
 
   button {
-    margin-top: 20px;
+    margin-top: 2rem;
   }
 }
